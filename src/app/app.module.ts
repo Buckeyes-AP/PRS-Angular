@@ -18,6 +18,10 @@ import { VendorListComponent } from './prs/vendor/vendor-list/vendor-list.compon
 import { VendorEditComponent } from './prs/vendor/vendor-edit/vendor-edit.component';
 import { VendorDetailComponent } from './prs/vendor/vendor-detail/vendor-detail.component';
 import { VendorCreateComponent } from './prs/vendor/vendor-create/vendor-create.component';
+import { ProductListComponent } from './prs/product/product-list/product-list.component';
+import { ProductDetailComponent } from './prs/product/product-detail/product-detail.component';
+import { ProductEditComponent } from './prs/product/product-edit/product-edit.component';
+import { ProductCreateComponent } from './prs/product/product-create/product-create.component';
 
 
 
@@ -36,6 +40,10 @@ import { VendorCreateComponent } from './prs/vendor/vendor-create/vendor-create.
     VendorEditComponent,
     VendorDetailComponent,
     VendorCreateComponent,
+    ProductListComponent,
+    ProductDetailComponent,
+    ProductEditComponent,
+    ProductCreateComponent,
 
    
     
