@@ -28,7 +28,8 @@
             <td *ngIf="p.vendor">{{ p.vendor.name }}</td>
         
             <td>
-                <a routerLink="/product/detail/{{ p.id }}">Detail</a> 
+                <a routerLink="/product/detail/{{ p.id }}">Detail</a> |
+                <a routerLink="/order/edit/{{ p.id }}">Edit</a>
             </td>
         </tr>
     </tbody>
