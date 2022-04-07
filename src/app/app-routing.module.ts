@@ -7,15 +7,21 @@ import { ProductCreateComponent } from './prs/product/product-create/product-cre
 import { ProductDetailComponent } from './prs/product/product-detail/product-detail.component';
 import { ProductEditComponent } from './prs/product/product-edit/product-edit.component';
 import { ProductListComponent } from './prs/product/product-list/product-list.component';
+import { RequestCreateComponent } from './prs/request/request-create/request-create.component';
+import { RequestDetailComponent } from './prs/request/request-detail/request-detail.component';
+import { RequestEditComponent } from './prs/request/request-edit/request-edit.component';
+import { RequestLinesComponent } from './prs/request/request-lines/request-lines.component';
+import { RequestListComponent } from './prs/request/request-list/request-list.component';
 import { UserCreateComponent } from './prs/user/user-create/user-create.component';
 import { UserDetailComponent } from './prs/user/user-detail/user-detail.component';
 import { UserEditComponent } from './prs/user/user-edit/user-edit.component';
 import { UserListComponent } from './prs/user/user-list/user-list.component';
+import { UserLoginComponent } from './prs/user/user-login/user-login.component';
 import { VendorCreateComponent } from './prs/vendor/vendor-create/vendor-create.component';
 import { VendorDetailComponent } from './prs/vendor/vendor-detail/vendor-detail.component';
 import { VendorEditComponent } from './prs/vendor/vendor-edit/vendor-edit.component';
 import { VendorListComponent } from './prs/vendor/vendor-list/vendor-list.component';
-import { Vendor } from './prs/vendor/vendor.class';
+
 
 const routes: Routes = [
   {path: "", redirectTo: "/home", pathMatch: "full"},
@@ -26,6 +32,7 @@ const routes: Routes = [
   {path: "user/create", component: UserCreateComponent},
   {path: "user/detail/:id", component: UserDetailComponent},
   {path: "user/edit/:id", component: UserEditComponent},
+  {path: "user/login", component: UserLoginComponent},
 
   {path: "vendor/list", component: VendorListComponent},
   {path: "vendor/create", component: VendorCreateComponent},
@@ -36,6 +43,14 @@ const routes: Routes = [
   {path: "product/create", component: ProductCreateComponent},
   {path: "product/detail/:id", component: ProductDetailComponent},
   {path: "product/edit/:id", component: ProductEditComponent},
+
+  {path: "requests/list", component: RequestListComponent},
+  {path: "requests/create", component: RequestCreateComponent},
+  {path: "request/detail/:id", component: RequestDetailComponent},
+  {path: "request/edit/:id", component: RequestEditComponent},
+  {path: "request/line/:id", component: RequestLinesComponent},
+
+
 
 
   {path: "**", component: E404Component}

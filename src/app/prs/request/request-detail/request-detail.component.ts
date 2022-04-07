@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from '../product.class';
-import { ProductService } from '../product.service';
+import { RequestService } from '../request.service';
+import { Request } from '../request.class';
 
 @Component({
-  selector: 'app-product-detail',
-  templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.css']
+  selector: 'app-request-detail',
+  templateUrl: './request-detail.component.html',
+  styleUrls: ['./request-detail.component.css']
 })
-export class ProductDetailComponent implements OnInit {
+export class RequestDetailComponent implements OnInit {
 
-  product!: Product
+  request!: Request
   showVerifyButton: boolean = false;
 
   constructor(
-    private prodsvc: ProductService,
+    private reqsvc: RequestService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
@@ -24,10 +24,10 @@ export class ProductDetailComponent implements OnInit {
   }
   verifyRemove(): void {
     this.showVerifyButton = false;
-    this.prodsvc.remove(this.product.id).subscribe({
+    this.reqsvc.remove(this.request.id).subscribe({
       next: (res) => {
-        console.debug("Product is deleted");
-        this.router.navigateByUrl("/product/list");
+        console.debug("Request is deleted");
+        this.router.navigateByUrl("/requests/list");
       },
       error: (err) => {
         console.error(err);
@@ -37,10 +37,10 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     let id = +this.route.snapshot.params["id"];
-    this.prodsvc.get(id).subscribe({
+    this.reqsvc.get(id).subscribe({
       next: (res) => {
-        console.debug("Product:", res);
-        this.product = res;
+        console.debug("Request:", res);
+        this.request = res;
       },
       error: (err) => {
         console.error(err);

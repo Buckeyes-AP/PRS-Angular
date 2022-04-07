@@ -1,0 +1,14 @@
+<app-menu></app-menu>
+<div>
+    <span id="pageTitle">User Login</span>
+</div>
+<div>
+    <label>Username:</label>
+    <input [(ngModel)]="username" type="text">
+</div>
+<div>
+    <label>Password:</label>
+    <input [(ngModel)]="password" type="password">
+</div>
+<button (click)="submit()">Login</button>
+

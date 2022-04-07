@@ -10,10 +10,12 @@ export class MenuComponent implements OnInit {
 
   menus: Menu[] = [
     new Menu("Home", "/home"),
-    new Menu("About", "/about"),
     new Menu("User", "/user/list"),
     new Menu("Vendor", "/vendor/list"),
-    new Menu("Product", "/product/list")
+    new Menu("Product", "/product/list"),
+    new Menu("Request", "/requests/list"),
+    new Menu("About", "/about"),
+    new Menu("Login", "/user/login")
   ]
 
   constructor() { }

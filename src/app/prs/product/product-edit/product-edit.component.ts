@@ -54,7 +54,7 @@ export class ProductEditComponent implements OnInit {
       error: (err) => {
         console.error(err);
       }
-    })
+    });
   }
 
 }

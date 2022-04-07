@@ -22,6 +22,12 @@ import { ProductListComponent } from './prs/product/product-list/product-list.co
 import { ProductDetailComponent } from './prs/product/product-detail/product-detail.component';
 import { ProductEditComponent } from './prs/product/product-edit/product-edit.component';
 import { ProductCreateComponent } from './prs/product/product-create/product-create.component';
+import { UserLoginComponent } from './prs/user/user-login/user-login.component';
+import { RequestLinesComponent } from './prs/request/request-lines/request-lines.component';
+import { RequestListComponent } from './prs/request/request-list/request-list.component';
+import { RequestEditComponent } from './prs/request/request-edit/request-edit.component';
+import { RequestDetailComponent } from './prs/request/request-detail/request-detail.component';
+import { RequestCreateComponent } from './prs/request/request-create/request-create.component';
 
 
 
@@ -44,6 +50,12 @@ import { ProductCreateComponent } from './prs/product/product-create/product-cre
     ProductDetailComponent,
     ProductEditComponent,
     ProductCreateComponent,
+    UserLoginComponent,
+    RequestLinesComponent,
+    RequestListComponent,
+    RequestEditComponent,
+    RequestDetailComponent,
+    RequestCreateComponent,
 
    
     
