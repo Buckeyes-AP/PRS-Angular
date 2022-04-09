@@ -28,6 +28,8 @@ import { RequestListComponent } from './prs/request/request-list/request-list.co
 import { RequestEditComponent } from './prs/request/request-edit/request-edit.component';
 import { RequestDetailComponent } from './prs/request/request-detail/request-detail.component';
 import { RequestCreateComponent } from './prs/request/request-create/request-create.component';
+import { RequestReviewListComponent } from './prs/request/request-review-list/request-review-list.component';
+import { RequestReviewItemComponent } from './prs/request/request-review-item/request-review-item.component';
 
 
 
@@ -56,6 +58,8 @@ import { RequestCreateComponent } from './prs/request/request-create/request-cre
     RequestEditComponent,
     RequestDetailComponent,
     RequestCreateComponent,
+    RequestReviewListComponent,
+    RequestReviewItemComponent,
 
    
     

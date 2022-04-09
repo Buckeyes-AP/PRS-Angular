@@ -26,7 +26,7 @@ export class RequestEditComponent implements OnInit {
     this.reqsvc.change(this.request).subscribe({
       next: (res) => {
         console.debug("Request Updated");
-        this.router.navigateByUrl("/requests/list");
+        this.router.navigateByUrl("/request/list");
       },
       error: (err) => {
         console.error(err);

@@ -1,6 +1,8 @@
-import { ApplicationInitStatus, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { User } from './user/user.class';
+
 
 
 @Injectable({
@@ -8,17 +10,20 @@ import { User } from './user/user.class';
 })
 export class SystemService {
 
-  user!: User | null
+
+
+  user!: User;
+  
+
 
   constructor(
-    private appinit: ApplicationInitStatus,
     private router: Router
   ) { }
 
-  get isAdmin(){}
+
 
   chkLogin(): void {
-    if(!thisisloggedIn){
+    if(!this.user == null){
       this.router.navigateByUrl("/login");
     }
   }

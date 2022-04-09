@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { RequestService } from '../../request/request.service';
+import { SystemService } from '../../system.service';
 import { User } from '../user.class';
 import { UserService } from '../user.service';
 
@@ -12,9 +14,13 @@ export class UserCreateComponent implements OnInit {
 
   user: User = new User();
 
+ 
+
+
   constructor(
     private usesvc: UserService,
-    private router: Router
+    private sys: SystemService,
+    private router: Router,
   ) { }
 
   save(): void{
@@ -30,6 +36,7 @@ export class UserCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
 
 }

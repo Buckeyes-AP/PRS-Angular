@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SystemService } from '../../system.service';
 import { User } from '../../user/user.class';
 import { UserService } from '../../user/user.service';
 import { Request } from '../request.class';
@@ -18,7 +19,8 @@ export class RequestCreateComponent implements OnInit {
   constructor(
     private reqsvc: RequestService,
     private usesvc: UserService,
-    private router: Router
+    private router: Router,
+    private syst: SystemService
 
   ) { }
 
@@ -34,12 +36,10 @@ export class RequestCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.usesvc.list().subscribe({
-      next: (res) => {
-        console.debug("Users:", res);
-        this.users = res;
+    this.syst.chkLogin();
+    this.request.userId = this.syst.user.id;
       }
-    })
-  }
+    }
+  
 
-}
+

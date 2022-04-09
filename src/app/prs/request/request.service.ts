@@ -16,20 +16,20 @@ export class RequestService {
     private http: HttpClient
   ) { }
 
-  requests(id: number): Observable<Request[]> {
-    return this.http.get(`${this.baseUrl}/${id}`) as Observable<Request[]>;
+  reviews(userId: number): Observable<Request[]> {
+    return this.http.get(`${this.baseUrl}/reviews/${userId}`) as Observable<Request[]>;
   }
 
-  review(id: number, request: Request): Observable<Request> {
-    return this.http.put(`${this.baseUrl}/${id}`, request) as Observable<Request>;
+  review(request: Request): Observable<any> {
+    return this.http.put(`${this.baseUrl}/review/${request.id}`, request) as Observable<Request>;
   }
 
-  approve(id: number, request: Request): Observable<Request> {
-    return this.http.put(`${this.baseUrl}/${id}`, request) as Observable<Request>;
+  approve(request: Request): Observable<Request> {
+    return this.http.put(`${this.baseUrl}/approve/${request.id}`, request) as Observable<any>;
   }
 
-  reject(id: number, request: Request): Observable<Request> {
-    return this.http.put(`${this.baseUrl}/${id}`, request) as Observable<Request>;
+  reject(request: Request): Observable<Request> {
+    return this.http.put(`${this.baseUrl}/reject/${request.id}`, request) as Observable<any>;
   }
 
   list(): Observable<Request[]> {
@@ -40,8 +40,8 @@ export class RequestService {
     return this.http.get(`${this.baseUrl}/${id}`) as Observable<Request>;
   }
 
-  create(user: Request): Observable<Request> {
-    return this.http.post(`${this.baseUrl}`, user) as Observable<Request>;
+  create(request: Request): Observable<Request> {
+    return this.http.post(`${this.baseUrl}`, request) as Observable<Request>;
   }
 
   change(request: Request): Observable<any> {
@@ -49,6 +49,6 @@ export class RequestService {
   }
 
   remove(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`) as Observable<any>;
+    return this.http.delete(`${this.baseUrl}/${id}`) as Observable<Request>;
   }
 }
