@@ -10,7 +10,7 @@ export class Request {
     status: string = "New";
     total: number = 0;
 
-    requestlines!: Requestline[]
+    requestLines!: Requestline[]
 
     userId: number = 0;
     user!: User;

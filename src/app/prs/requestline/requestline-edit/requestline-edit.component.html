@@ -1,1 +1,23 @@
-<p>requestline-edit works!</p>
+<app-menu></app-menu>
+<div>
+<span id="pageTitle">Requestline Change</span>
+</div>
+<table class="table table-sm" *ngIf="requestLines">
+    <tr>
+        <th>Id:</th>
+        <td><input [(ngModel)]="requestLines.id"></td>
+    </tr>
+    <tr>
+        <th>Product:</th>
+        <td><input [(ngModel)]="requestLines.productId"></td>
+    </tr>
+    <tr>
+        <th>Quantity:</th>
+        <td><input [(ngModel)]="requestLines.quantity"></td>
+    </tr>
+</table>
+<div>
+    <button (click)="save()" class="btn btn-primary">Save</button>
+</div>
+
+   

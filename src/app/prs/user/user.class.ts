@@ -6,6 +6,6 @@ export class User {
     lastname: string = "";
     phone: string = "";
     email: string = "";
-    isReviewer: boolean = true;
-    isAdmin: boolean = true;
+    isReviewer: boolean = false;
+    isAdmin: boolean = false;
 }

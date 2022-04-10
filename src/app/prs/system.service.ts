@@ -20,6 +20,10 @@ export class SystemService {
     private router: Router
   ) { }
 
+  getLoggedInUser(): User | null {
+    return this.user;
+  }
+
 
 
   chkLogin(): void {

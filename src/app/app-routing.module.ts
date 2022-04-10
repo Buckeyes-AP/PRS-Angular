@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AboutComponent } from './about/about.component';
 import { E404Component } from './e404/e404.component';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +16,7 @@ import { RequestListComponent } from './prs/request/request-list/request-list.co
 import { RequestReviewItemComponent } from './prs/request/request-review-item/request-review-item.component';
 import { RequestReviewListComponent } from './prs/request/request-review-list/request-review-list.component';
 import { RequestlineCreateComponent } from './prs/requestline/requestline-create/requestline-create.component';
+import { RequestlineEditComponent } from './prs/requestline/requestline-edit/requestline-edit.component';
 import { UserCreateComponent } from './prs/user/user-create/user-create.component';
 import { UserDetailComponent } from './prs/user/user-detail/user-detail.component';
 import { UserEditComponent } from './prs/user/user-edit/user-edit.component';
@@ -48,14 +50,17 @@ const routes: Routes = [
   {path: "product/edit/:id", component: ProductEditComponent},
 
   {path: "request/list", component: RequestListComponent},
-  {path: "request/create", component: RequestCreateComponent},
+  {path: "requests/create", component: RequestCreateComponent},
   {path: "request/detail/:id", component: RequestDetailComponent},
   {path: "request/edit/:id", component: RequestEditComponent},
   {path: "request/line/:id", component: RequestLinesComponent},
-  {path: "request/review/:id", component: RequestReviewItemComponent},
   {path: "request/review", component: RequestReviewListComponent},
+  {path: "request/review/:id", component: RequestReviewItemComponent},
  
-  {path: "requestline/create", component: RequestlineCreateComponent},
+  {path: "requestline/create/:id", component: RequestlineCreateComponent},
+  {path: "requestlines/edit/:id", component: RequestlineEditComponent},
+ 
+
 
   
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestService } from '../request.service';
 import { Request } from '../request.class'
+import { Requestline } from '../../requestline/requestline.class';
 
 @Component({
   selector: 'app-request-list',
@@ -10,7 +11,7 @@ import { Request } from '../request.class'
 export class RequestListComponent implements OnInit {
 
   requests!: Request[];
-
+  
   constructor(
     private reqsvc: RequestService
   ) { }

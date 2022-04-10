@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { E404Component } from './e404/e404.component';
 import { HomeComponent } from './home/home.component';
+
 import { MenuComponent } from './menu/menu.component';
 import { UserListComponent } from './prs/user/user-list/user-list.component';
 import { UserDetailComponent } from './prs/user/user-detail/user-detail.component';
@@ -30,6 +31,9 @@ import { RequestDetailComponent } from './prs/request/request-detail/request-det
 import { RequestCreateComponent } from './prs/request/request-create/request-create.component';
 import { RequestReviewListComponent } from './prs/request/request-review-list/request-review-list.component';
 import { RequestReviewItemComponent } from './prs/request/request-review-item/request-review-item.component';
+import { RequestlineEditComponent } from './prs/requestline/requestline-edit/requestline-edit.component';
+import { RequestlineCreateComponent } from './prs/requestline/requestline-create/requestline-create.component';
+
 
 
 
@@ -60,7 +64,8 @@ import { RequestReviewItemComponent } from './prs/request/request-review-item/re
     RequestCreateComponent,
     RequestReviewListComponent,
     RequestReviewItemComponent,
-
+    RequestlineEditComponent,
+    RequestlineCreateComponent
    
     
   ],

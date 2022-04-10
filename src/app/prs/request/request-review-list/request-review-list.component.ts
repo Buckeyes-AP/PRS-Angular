@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SystemService } from '../../system.service';
-import { RequestService } from '../request.service';
 import { Request } from '../request.class';
+import { RequestService } from '../request.service';
 
 @Component({
   selector: 'app-request-review-list',
@@ -12,14 +12,29 @@ export class RequestReviewListComponent implements OnInit {
 
   requests!: Request[];
 
+  sortColumn: string = "status";
+  sortOrderAsc: boolean = true;
+
+
   constructor(
     private syst: SystemService,
     private reqsvc: RequestService
   ) { }
 
+  
+
   ngOnInit(): void {
     this.syst.chkLogin();
+    this.reqsvc.reviews(this.syst.user.id).subscribe({
+      next: (res) => {console.log (res) 
+      this.requests = res},
+      error: (err) => {console.error (err)}
+    })
+
   
+  
+    
+ 
    
   }
 

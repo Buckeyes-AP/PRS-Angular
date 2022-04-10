@@ -26,6 +26,7 @@ export class RequestLinesComponent implements OnInit {
   review(): void {
     this.req.review(this.requests).subscribe({
       next: (res) => {
+        
         console.debug("Request reviewed");
         this.refresh();
       },

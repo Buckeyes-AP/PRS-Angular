@@ -14,7 +14,8 @@ import { RequestService } from '../request.service';
 export class RequestCreateComponent implements OnInit {
 
   request: Request = new Request();
-  users!: User[];
+  users! : User[];
+
 
   constructor(
     private reqsvc: RequestService,
@@ -37,7 +38,12 @@ export class RequestCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.syst.chkLogin();
-    this.request.userId = this.syst.user.id;
+    this.usesvc.list().subscribe({
+      next: (res) => {
+        console.debug("Requests:", res)
+        this.users = res;
+      }
+    }); 
       }
     }
   
